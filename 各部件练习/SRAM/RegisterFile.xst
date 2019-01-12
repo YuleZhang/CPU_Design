@@ -1,0 +1,5 @@
+set -tmpdir "E:/ISEProject/SRAM/xst/projnav.tmp"
+set -xsthdpdir "E:/ISEProject/SRAM/xst"
+elaborate
+-ifn RegisterFile.prj
+-ifmt mixed

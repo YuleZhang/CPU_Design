@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=E:\clock\impact.xsl
+OUTFILE=E:\clock\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=E:\clock
+LICENSE=iMPACT
+USER_INFO=iMPACT

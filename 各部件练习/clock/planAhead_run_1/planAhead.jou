@@ -1,0 +1,64 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Tue Dec 18 16:28:52 2018
+# Process ID: 1760
+# Log file: E:/clock/planAhead_run_1/planAhead.log
+# Journal file: E:/clock/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/clock/pa.fromNetlist.tcl
+startgroup
+set_property package_pin C9 [get_ports {seg1[0]}]
+endgroup
+startgroup
+set_property package_pin D9 [get_ports {seg1[1]}]
+endgroup
+startgroup
+set_property package_pin E9 [get_ports {seg1[2]}]
+endgroup
+startgroup
+set_property package_pin F9 [get_ports {seg1[3]}]
+endgroup
+startgroup
+set_property package_pin G9 [get_ports {seg1[4]}]
+endgroup
+startgroup
+set_property package_pin A10 [get_ports {seg1[5]}]
+endgroup
+startgroup
+set_property package_pin B10 [get_ports {seg1[6]}]
+endgroup
+startgroup
+set_property package_pin C7 [get_ports {seg2[0]}]
+endgroup
+startgroup
+set_property package_pin D7 [get_ports {seg2[1]}]
+endgroup
+startgroup
+set_property package_pin E7 [get_ports {seg2[2]}]
+endgroup
+startgroup
+set_property package_pin F7 [get_ports {seg2[3]}]
+endgroup
+startgroup
+set_property package_pin A8 [get_ports {seg2[4]}]
+endgroup
+startgroup
+set_property package_pin E8 [get_ports {seg2[5]}]
+endgroup
+startgroup
+set_property package_pin F8 [get_ports {seg2[6]}]
+endgroup
+startgroup
+set_property package_pin B9 [get_ports clk]
+endgroup
+save_constraints
+startgroup
+set_property package_pin U10 [get_ports rst]
+endgroup
+set_property is_loc_fixed false [get_ports [list  rst]]
+set_property is_loc_fixed true [get_ports [list  rst]]
+save_constraints
+set_property iostandard LVCMOS25 [get_ports [list rst]]
+save_constraints

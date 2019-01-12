@@ -1,0 +1,6 @@
+V3 3
+FL E:/clock/clock.vhd 2018/12/18.16:28:10 P.68d
+EN work/clock 1545121703 FL E:/clock/clock.vhd PB ieee/std_logic_1164 1370735607 \
+      PB ieee/std_logic_arith 1370735608 PB ieee/STD_LOGIC_UNSIGNED 1370735609
+AR work/clock/Behavioral 1545121704 \
+      FL E:/clock/clock.vhd EN work/clock 1545121703

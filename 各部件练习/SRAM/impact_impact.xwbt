@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=E:\ISEProject\SRAM\impact.xsl
+OUTFILE=E:\ISEProject\SRAM\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=E:\ISEProject\SRAM
+LICENSE=iMPACT
+USER_INFO=iMPACT

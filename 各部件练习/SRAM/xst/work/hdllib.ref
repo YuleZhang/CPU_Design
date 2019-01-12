@@ -1,0 +1,4 @@
+EN sram NULL E:/ISEProject/SRAM/SRAM.vhd sub00/vhpl00 1546431946
+AR registerfile behavioral E:/ISEProject/RegisterFile/RegisterFile.vhd sub00/vhpl03 1546254627
+AR sram behavioral E:/ISEProject/SRAM/SRAM.vhd sub00/vhpl01 1546431947
+EN registerfile NULL E:/ISEProject/RegisterFile/RegisterFile.vhd sub00/vhpl02 1546254626

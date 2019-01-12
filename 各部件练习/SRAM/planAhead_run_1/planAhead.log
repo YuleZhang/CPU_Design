@@ -1,0 +1,301 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Sat Dec 29 15:45:25 2018
+# Process ID: 4688
+# Log file: E:/ISEProject/SRAM/planAhead_run_1/planAhead.log
+# Journal file: E:/ISEProject/SRAM/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -758 day(s)
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.6/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.6/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.6/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source E:/ISEProject/SRAM/pa.fromNetlist.tcl
+# create_project -name SRAM -dir "E:/ISEProject/SRAM/planAhead_run_1" -part xc3s1200efg320-4
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "E:/ISEProject/SRAM/SRAM.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {E:/ISEProject/SRAM} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "SRAM.ucf" [current_fileset -constrset]
+Adding file 'E:/ISEProject/SRAM/SRAM.ucf' to fileset 'constrs_1'
+# add_files [list {SRAM.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc3s1200efg320-4
+Release 14.6 - ngc2edif P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design SRAM.ngc ...
+WARNING:NetListWriters:298 - No output is written to SRAM.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file SRAM.edif ...
+ngc2edif: Total memory usage is 82396 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/SRAM.data/cache/SRAM_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/SRAM.data/cache/SRAM_ngc_zx.edif]
+INFO: [Designutils 20-910] Reading macro library C:/Xilinx/14.6/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [C:/Xilinx/14.6/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [C:/Xilinx/14.6/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Loading clock regions from C:/Xilinx/14.6/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.6/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/ClockBuffers.xml
+Loading package from C:/Xilinx/14.6/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/fg320/Package.xml
+Loading io standards from C:/Xilinx/14.6/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from C:/Xilinx/14.6/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/fg320/SSORules.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.6/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [Timing 38-77] Reading timing library C:/Xilinx/14.6/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+INFO: [Timing 38-34] Done reading timing library C:/Xilinx/14.6/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+Parsing UCF File [E:/ISEProject/SRAM/SRAM.ucf]
+Finished Parsing UCF File [E:/ISEProject/SRAM/SRAM.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 38a84815
+link_design: Time (s): elapsed = 00:00:10 . Memory (MB): peak = 567.813 ; gain = 94.289
+startgroup
+set_property package_pin C17 [get_ports {addr[0]}]
+endgroup
+startgroup
+set_property package_pin C18 [get_ports {addr[1]}]
+endgroup
+set_property package_pin "" [get_ports [list  {addr[2]}]]
+startgroup
+set_property package_pin C1 [get_ports {addr[1]}]
+endgroup
+startgroup
+set_property package_pin C18 [get_ports {addr[1]}]
+endgroup
+startgroup
+set_property package_pin D16 [get_ports {addr[2]}]
+endgroup
+startgroup
+set_property package_pin D17 [get_ports {addr[3]}]
+endgroup
+startgroup
+set_property package_pin E15 [get_ports {addr[4]}]
+endgroup
+startgroup
+set_property package_pin E16 [get_ports {addr[5]}]
+endgroup
+startgroup
+set_property package_pin F14 [get_ports {addr[6]}]
+endgroup
+startgroup
+set_property package_pin F15 [get_ports {addr[7]}]
+endgroup
+startgroup
+set_property package_pin F17 [get_ports {addr[8]}]
+endgroup
+startgroup
+set_property package_pin F18 [get_ports {addr[9]}]
+endgroup
+startgroup
+set_property package_pin G13 [get_ports {addr[10]}]
+endgroup
+startgroup
+set_property package_pin G14 [get_ports {addr[11]}]
+endgroup
+set_property package_pin "" [get_ports [list  {addr[13]}]]
+startgroup
+set_property package_pin G15 [get_ports {addr[12]}]
+endgroup
+startgroup
+set_property package_pin G16 [get_ports {addr[13]}]
+endgroup
+startgroup
+set_property package_pin H14 [get_ports {addr[14]}]
+endgroup
+startgroup
+set_property package_pin H15 [get_ports {addr[15]}]
+endgroup
+startgroup
+set_property package_pin H16 [get_ports {addr[16]}]
+endgroup
+startgroup
+set_property package_pin H17 [get_ports {addr[17]}]
+endgroup
+save_constraints
+set_property package_pin "" [get_ports [list  {data[15]}]]
+startgroup
+set_property package_pin J12 [get_ports {data[0]}]
+endgroup
+startgroup
+set_property package_pin J13 [get_ports {data[1]}]
+endgroup
+startgroup
+set_property package_pin J14 [get_ports {data[2]}]
+endgroup
+startgroup
+set_property package_pin J15 [get_ports {data[3]}]
+endgroup
+startgroup
+set_property package_pin J16 [get_ports {data[4]}]
+endgroup
+startgroup
+set_property package_pin J17 [get_ports {data[5]}]
+endgroup
+startgroup
+set_property package_pin K12 [get_ports {data[6]}]
+endgroup
+startgroup
+set_property package_pin K13 [get_ports {data[7]}]
+endgroup
+startgroup
+set_property package_pin K14 [get_ports {data[8]}]
+endgroup
+startgroup
+set_property package_pin K15 [get_ports {data[9]}]
+endgroup
+startgroup
+set_property package_pin L15 [get_ports {data[10]}]
+endgroup
+startgroup
+set_property package_pin L16 [get_ports {data[11]}]
+endgroup
+startgroup
+set_property package_pin L17 [get_ports {data[12]}]
+endgroup
+startgroup
+set_property package_pin L18 [get_ports {data[13]}]
+endgroup
+startgroup
+set_property package_pin M13 [get_ports {data[14]}]
+endgroup
+save_constraints
+startgroup
+set_property package_pin M14 [get_ports {data[15]}]
+endgroup
+startgroup
+set_property package_pin D10 [get_ports {led[0]}]
+endgroup
+startgroup
+set_property package_pin E10 [get_ports {led[1]}]
+endgroup
+startgroup
+set_property package_pin A11 [get_ports {led[2]}]
+endgroup
+startgroup
+set_property package_pin B11 [get_ports {led[3]}]
+endgroup
+startgroup
+set_property package_pin C11 [get_ports {led[4]}]
+endgroup
+startgroup
+set_property package_pin D11 [get_ports {led[5]}]
+endgroup
+startgroup
+set_property package_pin E11 [get_ports {led[6]}]
+endgroup
+startgroup
+set_property package_pin F11 [get_ports {led[7]}]
+endgroup
+startgroup
+set_property package_pin A12 [get_ports {led[8]}]
+endgroup
+startgroup
+set_property package_pin E12 [get_ports {led[9]}]
+endgroup
+startgroup
+set_property package_pin F12 [get_ports {led[10]}]
+endgroup
+startgroup
+set_property package_pin A13 [get_ports {led[11]}]
+endgroup
+startgroup
+set_property package_pin B13 [get_ports {led[12]}]
+endgroup
+startgroup
+set_property package_pin D13 [get_ports {led[13]}]
+endgroup
+startgroup
+set_property package_pin E13 [get_ports {led[14]}]
+endgroup
+save_constraints
+startgroup
+set_property package_pin A14 [get_ports {led[15]}]
+endgroup
+save_constraints
+startgroup
+set_property package_pin T7 [get_ports {sw[0]}]
+endgroup
+startgroup
+set_property package_pin R7 [get_ports {sw[1]}]
+endgroup
+startgroup
+set_property package_pin U8 [get_ports {sw[2]}]
+endgroup
+startgroup
+set_property package_pin V4 [get_ports {sw[3]}]
+endgroup
+startgroup
+set_property package_pin V3 [get_ports {sw[4]}]
+endgroup
+startgroup
+set_property package_pin V2 [get_ports {sw[5]}]
+endgroup
+startgroup
+set_property package_pin U1 [get_ports {sw[6]}]
+endgroup
+startgroup
+set_property package_pin R4 [get_ports {sw[7]}]
+endgroup
+startgroup
+set_property package_pin R1 [get_ports {sw[8]}]
+endgroup
+startgroup
+set_property package_pin N2 [get_ports {sw[9]}]
+endgroup
+startgroup
+set_property package_pin R1 [get_ports {sw[8]}]
+endgroup
+startgroup
+set_property package_pin N1 [get_ports {sw[10]}]
+endgroup
+startgroup
+set_property package_pin M1 [get_ports {sw[11]}]
+endgroup
+startgroup
+set_property package_pin K7 [get_ports {sw[12]}]
+endgroup
+startgroup
+set_property package_pin K2 [get_ports {sw[13]}]
+endgroup
+startgroup
+set_property package_pin J7 [get_ports {sw[14]}]
+endgroup
+startgroup
+set_property package_pin J6 [get_ports {sw[15]}]
+endgroup
+save_constraints
+startgroup
+set_property package_pin U9 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin U10 [get_ports rst]
+endgroup
+set_property package_pin "" [get_ports [list  RAM_OE]]
+startgroup
+set_property package_pin M15 [get_ports RAM_EN]
+endgroup
+startgroup
+set_property package_pin M16 [get_ports RAM_OE]
+endgroup
+startgroup
+set_property package_pin M18 [get_ports RAM_RW]
+endgroup
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+ (See E:/ISEProject/SRAM\planAhead_pid4688.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Sat Dec 29 15:55:23 2018...
+INFO: [Common 17-83] Releasing license: PlanAhead

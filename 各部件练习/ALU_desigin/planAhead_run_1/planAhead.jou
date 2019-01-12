@@ -1,0 +1,122 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Wed Dec 19 11:32:00 2018
+# Process ID: 5464
+# Log file: E:/ALU_desigin/planAhead_run_1/planAhead.log
+# Journal file: E:/ALU_desigin/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/ALU_desigin/pa.fromNetlist.tcl
+set_property package_pin "" [get_ports [list  {sw[0]}]]
+startgroup
+set_property package_pin B9 [get_ports clk]
+endgroup
+set_property is_loc_fixed false [get_ports [list  clk]]
+set_property is_loc_fixed true [get_ports [list  clk]]
+set_property package_pin "" [get_ports [list  {sw[0]}]]
+set_property package_pin "" [get_ports [list  {sw[0]}]]
+startgroup
+set_property package_pin B9 [get_ports clk]
+endgroup
+set_property package_pin "" [get_ports [list  {sw[1]}]]
+startgroup
+set_property package_pin T7 [get_ports {sw[0]}]
+endgroup
+startgroup
+set_property package_pin R7 [get_ports {sw[1]}]
+endgroup
+startgroup
+set_property package_pin U8 [get_ports {sw[2]}]
+endgroup
+startgroup
+set_property package_pin V4 [get_ports {sw[3]}]
+endgroup
+startgroup
+set_property package_pin V3 [get_ports {sw[4]}]
+endgroup
+startgroup
+set_property package_pin V2 [get_ports {sw[5]}]
+endgroup
+startgroup
+set_property package_pin U1 [get_ports {sw[6]}]
+endgroup
+startgroup
+set_property package_pin R4 [get_ports {sw[7]}]
+endgroup
+startgroup
+set_property package_pin R1 [get_ports {sw[8]}]
+endgroup
+startgroup
+set_property package_pin N2 [get_ports {sw[9]}]
+endgroup
+startgroup
+set_property package_pin N1 [get_ports {sw[10]}]
+endgroup
+startgroup
+set_property package_pin M1 [get_ports {sw[11]}]
+endgroup
+startgroup
+set_property package_pin K7 [get_ports {sw[12]}]
+endgroup
+startgroup
+set_property package_pin K2 [get_ports {sw[13]}]
+endgroup
+startgroup
+set_property package_pin K7 [get_ports {sw[12]}]
+endgroup
+startgroup
+set_property package_pin J7 [get_ports {sw[14]}]
+endgroup
+startgroup
+set_property package_pin J6 [get_ports {sw[15]}]
+endgroup
+startgroup
+set_property package_pin D10 [get_ports {led[0]}]
+endgroup
+startgroup
+set_property package_pin E10 [get_ports {led[1]}]
+endgroup
+startgroup
+set_property package_pin A11 [get_ports {led[2]}]
+endgroup
+startgroup
+set_property package_pin B11 [get_ports {led[3]}]
+endgroup
+startgroup
+set_property package_pin C11 [get_ports {led[4]}]
+endgroup
+startgroup
+set_property package_pin D11 [get_ports {led[5]}]
+endgroup
+startgroup
+set_property package_pin E11 [get_ports {led[6]}]
+endgroup
+startgroup
+set_property package_pin F11 [get_ports {led[7]}]
+endgroup
+startgroup
+set_property package_pin A12 [get_ports {led[8]}]
+endgroup
+startgroup
+set_property package_pin E12 [get_ports {led[9]}]
+endgroup
+startgroup
+set_property package_pin F12 [get_ports {led[10]}]
+endgroup
+startgroup
+set_property package_pin A13 [get_ports {led[11]}]
+endgroup
+startgroup
+set_property package_pin B13 [get_ports {led[12]}]
+endgroup
+startgroup
+set_property package_pin D13 [get_ports {led[13]}]
+endgroup
+startgroup
+set_property package_pin E13 [get_ports {led[14]}]
+endgroup
+startgroup
+set_property package_pin A14 [get_ports {led[15]}]
+endgroup
+save_constraints

@@ -1,0 +1,424 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: adcc.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "adcc.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "adcc"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-4-fg320
+
+---- Source Options
+Top Module Name                    : adcc
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "E:/ALU_desigin/ALU_desigin.vhd" in Library work.
+Entity <adcc> compiled.
+Entity <adcc> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <adcc> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <adcc> in library <work> (Architecture <Behavioral>).
+Entity <adcc> analyzed. Unit <adcc> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <adcc>.
+    Related source file is "E:/ALU_desigin/ALU_desigin.vhd".
+WARNING:Xst:647 - Input <clk50> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <add> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <clk_previous> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <status>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk                       (falling_edge)       |
+    | Power Up State     | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit register for signal <led>.
+    Found 16-bit register for signal <a>.
+    Found 16-bit register for signal <b>.
+    Found 16-bit addsub for signal <led$share0000> created at line 64.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  48 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <adcc> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 16-bit addsub                                         : 1
+# Registers                                            : 3
+ 16-bit register                                       : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <status/FSM> on signal <status[1:4]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 0001
+ 01    | 1000
+ 10    | 0100
+ 11    | 0010
+-------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 1
+ 16-bit addsub                                         : 1
+# Registers                                            : 48
+ Flip-Flops                                            : 48
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <adcc> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block adcc, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 52
+ Flip-Flops                                            : 52
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : adcc.ngr
+Top Level Output File Name         : adcc
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 38
+
+Cell Usage :
+# BELS                             : 71
+#      LUT2                        : 1
+#      LUT2_D                      : 1
+#      LUT3                        : 16
+#      LUT3_D                      : 1
+#      LUT4                        : 21
+#      MUXCY                       : 15
+#      XORCY                       : 16
+# FlipFlops/Latches                : 52
+#      FD_1                        : 20
+#      FDE_1                       : 32
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 32
+#      IBUF                        : 16
+#      OBUF                        : 16
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-4 
+
+ Number of Slices:                       39  out of   8672     0%  
+ Number of Slice Flip Flops:             52  out of  17344     0%  
+ Number of 4 input LUTs:                 40  out of  17344     0%  
+ Number of IOs:                          38
+ Number of bonded IOBs:                  33  out of    250    13%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 52    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.324ns (Maximum Frequency: 187.829MHz)
+   Minimum input arrival time before clock: 10.740ns
+   Maximum output required time after clock: 4.310ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.324ns (frequency: 187.829MHz)
+  Total number of paths / destination ports: 492 / 52
+-------------------------------------------------------------------------
+Delay:               5.324ns (Levels of Logic = 18)
+  Source:            b_0 (FF)
+  Destination:       led_15 (FF)
+  Source Clock:      clk falling
+  Destination Clock: clk falling
+
+  Data Path: b_0 to led_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE_1:C->Q            1   0.591   0.499  b_0 (b_0)
+     LUT3:I1->O            1   0.704   0.000  Maddsub_led_share0000_lut<0> (Maddsub_led_share0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Maddsub_led_share0000_cy<0> (Maddsub_led_share0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<1> (Maddsub_led_share0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<2> (Maddsub_led_share0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<3> (Maddsub_led_share0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<4> (Maddsub_led_share0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<5> (Maddsub_led_share0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<6> (Maddsub_led_share0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<7> (Maddsub_led_share0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<8> (Maddsub_led_share0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<9> (Maddsub_led_share0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<10> (Maddsub_led_share0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<11> (Maddsub_led_share0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<12> (Maddsub_led_share0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<13> (Maddsub_led_share0000_cy<13>)
+     MUXCY:CI->O           0   0.059   0.000  Maddsub_led_share0000_cy<14> (Maddsub_led_share0000_cy<14>)
+     XORCY:CI->O           1   0.804   0.424  Maddsub_led_share0000_xor<15> (led_share0000<15>)
+     LUT4:I3->O            1   0.704   0.000  led_mux0000<0>1 (led_mux0000<0>)
+     FD_1:D                    0.308          led_15
+    ----------------------------------------
+    Total                      5.324ns (4.401ns logic, 0.923ns route)
+                                       (82.7% logic, 17.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2944 / 48
+-------------------------------------------------------------------------
+Offset:              10.740ns (Levels of Logic = 22)
+  Source:            sw<13> (PAD)
+  Destination:       led_15 (FF)
+  Destination Clock: clk falling
+
+  Data Path: sw<13> to led_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.218   0.706  sw_13_IBUF (sw_13_IBUF)
+     LUT4:I0->O            1   0.704   0.595  led_cmp_eq0000212 (led_cmp_eq0000212)
+     LUT4:I0->O            4   0.704   0.666  led_cmp_eq0000271 (N2)
+     LUT2:I1->O           16   0.704   1.209  led_cmp_eq00003 (led_cmp_eq0000)
+     LUT3:I0->O            1   0.704   0.000  Maddsub_led_share0000_lut<0> (Maddsub_led_share0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Maddsub_led_share0000_cy<0> (Maddsub_led_share0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<1> (Maddsub_led_share0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<2> (Maddsub_led_share0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<3> (Maddsub_led_share0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<4> (Maddsub_led_share0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<5> (Maddsub_led_share0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<6> (Maddsub_led_share0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<7> (Maddsub_led_share0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<8> (Maddsub_led_share0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<9> (Maddsub_led_share0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<10> (Maddsub_led_share0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<11> (Maddsub_led_share0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<12> (Maddsub_led_share0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_led_share0000_cy<13> (Maddsub_led_share0000_cy<13>)
+     MUXCY:CI->O           0   0.059   0.000  Maddsub_led_share0000_cy<14> (Maddsub_led_share0000_cy<14>)
+     XORCY:CI->O           1   0.804   0.424  Maddsub_led_share0000_xor<15> (led_share0000<15>)
+     LUT4:I3->O            1   0.704   0.000  led_mux0000<0>1 (led_mux0000<0>)
+     FD_1:D                    0.308          led_15
+    ----------------------------------------
+    Total                     10.740ns (7.140ns logic, 3.600ns route)
+                                       (66.5% logic, 33.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              4.310ns (Levels of Logic = 1)
+  Source:            led_15 (FF)
+  Destination:       led<15> (PAD)
+  Source Clock:      clk falling
+
+  Data Path: led_15 to led<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             2   0.591   0.447  led_15 (led_15)
+     OBUF:I->O                 3.272          led_15_OBUF (led<15>)
+    ----------------------------------------
+    Total                      4.310ns (3.863ns logic, 0.447ns route)
+                                       (89.6% logic, 10.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.22 secs
+ 
+--> 
+
+Total memory usage is 258860 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

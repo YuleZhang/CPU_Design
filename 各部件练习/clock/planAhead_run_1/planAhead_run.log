@@ -1,0 +1,117 @@
+
+****** PlanAhead v14.6 (64-bit)
+  **** Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+    ** Copyright 1986-1999, 2001-2012 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -747 day(s)
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.6/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.6/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.6/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+Failed to create the shortcut directory: 'C:\Users\Administrator\AppData\Roaming/Xilinx/PlanAhead\14.6\shortcuts'
+Failed to create the layout directory: 'C:\Users\Administrator\AppData\Roaming/Xilinx/PlanAhead\14.6\layouts\application'
+source E:/clock/pa.fromNetlist.tcl
+# create_project -name clock -dir "E:/clock/planAhead_run_3" -part xc3s1200efg320-4
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "E:/clock/clock.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {E:/clock} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "clock.ucf" [current_fileset -constrset]
+Adding file 'E:/clock/clock.ucf' to fileset 'constrs_1'
+# add_files [list {clock.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc3s1200efg320-4
+WARNING: [Common 17-175] Failed to make directory to contain cached edif files [E:/clock/planAhead_run_3/clock.data/cache]
+Release 14.6 - ngc2edif P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design clock.ngc ...
+WARNING:NetListWriters:298 - No output is written to clock.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file clock.edif ...
+ngc2edif: Total memory usage is 82396 kilobytes
+
+Parsing EDIF File [./.Xil/PlanAhead-1760-PC-20150722ZKIA/ngc2edif/clock.edif]
+Finished Parsing EDIF File [./.Xil/PlanAhead-1760-PC-20150722ZKIA/ngc2edif/clock.edif]
+INFO: [Designutils 20-910] Reading macro library C:/Xilinx/14.6/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [C:/Xilinx/14.6/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [C:/Xilinx/14.6/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Loading clock regions from C:/Xilinx/14.6/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.6/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/ClockBuffers.xml
+Loading package from C:/Xilinx/14.6/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/fg320/Package.xml
+Loading io standards from C:/Xilinx/14.6/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from C:/Xilinx/14.6/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/fg320/SSORules.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.6/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [Timing 38-77] Reading timing library C:/Xilinx/14.6/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+INFO: [Timing 38-34] Done reading timing library C:/Xilinx/14.6/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+Parsing UCF File [E:/clock/clock.ucf]
+Finished Parsing UCF File [E:/clock/clock.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 582ef848
+link_design: Time (s): elapsed = 00:00:13 . Memory (MB): peak = 564.758 ; gain = 150.277
+startgroup
+set_property package_pin C9 [get_ports {seg1[0]}]
+endgroup
+startgroup
+set_property package_pin D9 [get_ports {seg1[1]}]
+endgroup
+startgroup
+set_property package_pin E9 [get_ports {seg1[2]}]
+endgroup
+startgroup
+set_property package_pin F9 [get_ports {seg1[3]}]
+endgroup
+startgroup
+set_property package_pin G9 [get_ports {seg1[4]}]
+endgroup
+startgroup
+set_property package_pin A10 [get_ports {seg1[5]}]
+endgroup
+startgroup
+set_property package_pin B10 [get_ports {seg1[6]}]
+endgroup
+startgroup
+set_property package_pin C7 [get_ports {seg2[0]}]
+endgroup
+startgroup
+set_property package_pin D7 [get_ports {seg2[1]}]
+endgroup
+startgroup
+set_property package_pin E7 [get_ports {seg2[2]}]
+endgroup
+startgroup
+set_property package_pin F7 [get_ports {seg2[3]}]
+endgroup
+startgroup
+set_property package_pin A8 [get_ports {seg2[4]}]
+endgroup
+startgroup
+set_property package_pin E8 [get_ports {seg2[5]}]
+endgroup
+startgroup
+set_property package_pin F8 [get_ports {seg2[6]}]
+endgroup
+startgroup
+set_property package_pin B9 [get_ports clk]
+endgroup
+save_constraints
+startgroup
+set_property package_pin U10 [get_ports rst]
+endgroup
+set_property is_loc_fixed false [get_ports [list  rst]]
+set_property is_loc_fixed true [get_ports [list  rst]]
+save_constraints
+set_property iostandard LVCMOS25 [get_ports [list rst]]
+save_constraints
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Tue Dec 18 16:31:32 2018...
+INFO: [Common 17-83] Releasing license: PlanAhead

@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Tue Dec 18 16:29:13 2018
+# Process ID: 928
+# Log file: E:/clock/planAhead_run_3/planAhead.log
+# Journal file: E:/clock/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -747 day(s)
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.6/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.6/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.6/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source E:/clock/pa.fromNetlist.tcl
+# create_project -name clock -dir "E:/clock/planAhead_run_3" -part xc3s1200efg320-4
+ERROR: [Common 17-53] User Exception: Project already exists on disk, please use '-force' option to overwrite: 
+     E:/clock/planAhead_run_3/clock.ppr
+     E:/clock/planAhead_run_3/clock.data
+
+    while executing
+"create_project -name clock -dir "E:/clock/planAhead_run_3" -part xc3s1200efg320-4"
+    (file "E:/clock/pa.fromNetlist.tcl" line 4)
+exit
+INFO: [Common 17-206] Exiting PlanAhead at Tue Dec 18 16:29:25 2018...
+INFO: [Common 17-83] Releasing license: PlanAhead

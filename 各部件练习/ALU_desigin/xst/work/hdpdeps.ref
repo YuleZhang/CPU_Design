@@ -1,0 +1,7 @@
+V3 3
+FL E:/ALU_desigin/ALU_desigin.vhd 2018/12/19.15:56:24 P.68d
+EN work/ALU_desigin 1545206199 FL E:/ALU_desigin/ALU_desigin.vhd \
+      PB ieee/std_logic_1164 1370735607 PB ieee/std_logic_arith 1370735608 \
+      PB ieee/STD_LOGIC_UNSIGNED 1370735609
+AR work/ALU_desigin/Behavioral 1545206200 \
+      FL E:/ALU_desigin/ALU_desigin.vhd EN work/ALU_desigin 1545206199

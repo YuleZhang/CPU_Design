@@ -1,0 +1,23 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "seg1[0]" LOC = C9;
+NET "seg1[1]" LOC = D9;
+NET "seg1[2]" LOC = E9;
+NET "seg1[3]" LOC = F9;
+NET "seg1[4]" LOC = G9;
+NET "seg1[5]" LOC = A10;
+NET "seg1[6]" LOC = B10;
+NET "seg2[0]" LOC = C7;
+NET "seg2[1]" LOC = D7;
+NET "seg2[2]" LOC = E7;
+NET "seg2[3]" LOC = F7;
+NET "seg2[4]" LOC = A8;
+NET "seg2[5]" LOC = E8;
+NET "seg2[6]" LOC = F8;
+NET "clk" LOC = B9;
+NET "rst" LOC = U10;
+
+# PlanAhead Generated IO constraints 
+
+NET "rst" IOSTANDARD = LVCMOS25;

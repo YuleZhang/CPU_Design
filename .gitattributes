@@ -1,0 +1,3 @@
+*.xml linguist-language=VHDL
+*.html linguist-language=VHDL
+*.vhd linguist-language=VHDL
